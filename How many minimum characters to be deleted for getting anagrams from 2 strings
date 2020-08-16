@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int c[26]={0},i=0,j,sum=0;
+    char a[10]="abcd";
+    char b[10]="abf";
+    while(i<4)
+    {
+        j=a[i]-'a';
+       
+        c[j]++;
+       
+        i++;
+    }
+    i=0;
+    while(i<3)
+    {
+        j=b[i]-'a';
+        
+        c[j]--;
+        i++;
+    }
+    for(i=0;i<26;i++)
+    {
+       sum +=abs(c[i]);
+        
+    }
+
+    printf("%d",sum);
+    return 0;
+}
