@@ -12,8 +12,8 @@ int main() {
         printf("%d ",i+1);
         scanf("%d",&ptr[i]);
     
-        
     }
+    printf("Array Elements : \n");
     for(i=0;i<len;i++)
         printf("\n%d %d",i+1,ptr[i]);
     
