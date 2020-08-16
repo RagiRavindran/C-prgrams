@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    
+    int *ptr = NULL;
+    int i, len;
+    printf("enter length of the array: \n");
+    scanf("%d",&len);
+    ptr = (int*)malloc(sizeof(int)*len);
+    printf("enter %d elements of the array: \n",len);
+    for(i=0;i<len;i++){
+        printf("%d ",i+1);
+        scanf("%d",&ptr[i]);
+    
+        
+    }
+    for(i=0;i<len;i++)
+        printf("\n%d %d",i+1,ptr[i]);
+    
+    return 0;
+}
