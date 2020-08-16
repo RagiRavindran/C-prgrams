@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    
+    char str[100];
+    int count[256]={0};
+    int i, totalodd = 0;
+    
+    gets(str);
+    for(i=0;str[i] != '\0'; i++)
+    {
+        count[str[i]]++;
+    }
+    for(i=0;i<256;i++)
+    {
+        totalodd += (count[i]&1);
+    }
+    if(totalodd > 1)
+    {
+        printf("cannot arrange");
+    }else printf("can arrange");
+    return 0;
+}
