@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main () {
+   char str1[10];
+   
+   FILE * fp;
+   char c;
+   int i = 0, s = 0, st = 0;
+   fp = fopen ("text1.txt", "w+");
+   fputs("We are in 2020 \n", fp);
+   fputs("We are happy", fp);
+   
+   rewind(fp);
+     while ((c = getc(fp)) != EOF) 
+        {printf("%c", c);
+        if(c == '\n')
+            st++;
+        else if(c == ' ')
+            s++;
+        i++;
+        }
+        printf("\ncharacters(including space and newline) = %d, words = %d sentences = %d\n", i,s+1,st+1);
+        
+    rewind(fp);
+    for(i=0;i<s+1;i++)
+    {
+       fscanf(fp, "%s", str1);
+       
+       printf("Read String%d |%s|\n", i+1,str1 );
+    }
+
+   fclose(fp);
+   
+   return(0);
+}
