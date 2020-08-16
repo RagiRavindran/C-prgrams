@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+#include <string.h>
+int main() {
+    
+    
+    char word[10];int c = 0;
+    
+    strcpy(word,"hi ");
+    printf("%s \n",word);
+    strcat(word,"hello");
+    printf("%s \n",word);
+   c = strcmp(word,"hi hell");
+   printf("%d \n",c);
+    return 0;
+}
