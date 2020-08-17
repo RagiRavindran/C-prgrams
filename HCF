@@ -16,7 +16,7 @@ int main()
             if(x%i == 0 && n%i == 0)
                 {hcf = hcf * i; }
         }
-        printf("%d\n",hcf);
+        printf("HCF = %d\n",hcf);
     }
     
     return 0;
