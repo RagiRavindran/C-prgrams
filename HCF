@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int x , n,d, i=0, hcf=1;
+    printf("enter 2 numbers\n");
+    scanf("%d %d", &x,&n);
+     d = abs(x-n);
+     
+    if(x%d == 0 && n%d == 0)
+        printf("%d\n",d);
+    else{
+        for(i=1;i<d;i++)
+        {
+            if(x%i == 0 && n%i == 0)
+                {hcf = hcf * i; }
+        }
+        printf("%d\n",hcf);
+    }
+    
+    return 0;
+}
