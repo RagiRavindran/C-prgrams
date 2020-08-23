@@ -8,18 +8,17 @@ int main()
     char b[10]="abf";
     while(i<4)
     {
-        j=a[i]-'a';
+        
        
-        c[j]++;
+        c[a[i]-'a']++;
        
         i++;
     }
     i=0;
     while(i<3)
     {
-        j=b[i]-'a';
         
-        c[j]--;
+        c[b[i]-'a']--;
         i++;
     }
     for(i=0;i<26;i++)
@@ -31,3 +30,4 @@ int main()
     printf("%d",sum);
     return 0;
 }
+
