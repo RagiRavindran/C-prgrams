@@ -13,8 +13,11 @@ int main()
     else{
         for(i=1;i<d;i++)
         {
+            if(d%i == 0){
+            
             if(x%i == 0 && n%i == 0)
                 {hcf = hcf * i; }
+            }
         }
         printf("HCF = %d\n",hcf);
     }
